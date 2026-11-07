@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/*
+ * 该样式表以 cssInjectionMode: 'ui' 注入到 Shadow DOM 内部，
+ * 不会污染宿主页面的样式；宿主页面也无法影响控制栏。
+ */
+:host {
+  color-scheme: light dark;
+}

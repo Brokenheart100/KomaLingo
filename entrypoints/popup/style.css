@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Popup 是一个固定尺寸的独立窗口，浏览器按 body 宽度决定弹窗大小。 */
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 360px;
+  min-height: 200px;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    'PingFang SC',
+    'Microsoft YaHei',
+    sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tailwind 的 preflight 会把背景重置为透明，这里给弹窗一个中性底色。 */
+body {
+  background-color: var(--color-slate-50, #f8fafc);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-slate-900, #0f172a);
+  }
+}
